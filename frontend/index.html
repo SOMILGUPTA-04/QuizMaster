@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Quiz Platform</h1>
+    </header>
+    <main>
+      <section id="quiz-creator" class="section">
+        <h2>Create a Quiz</h2>
+        <form id="create-quiz-form">
+          <input type="text" id="quiz-title" placeholder="Quiz Title" required style="width:max-content;">
+          <div id="questions" style="width:fit-content;">
+            <!-- Question template -->
+            <div class="question">
+              <input type="text" class="question-text" placeholder="Question" required>
+              <div class="options" style="width:fit-content;">
+                <input type="text" class="option" placeholder="Option 1" required>
+                <input type="text" class="option" placeholder="Option 2" required>
+                <input type="text" class="option" placeholder="Option 3" required>
+                <input type="text" class="option" placeholder="Option 4" required>
+              </div>
+              <div class="answer" style="width:fit-content;color: #e43f5a;">Select the correct-option</div>
+              <select class="correct-option" style="width:fit-content;">
+                <option value="0">Option 1</option>
+                <option value="1">Option 2</option>
+                <option value="2">Option 3</option>
+                <option value="3">Option 4</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" id="add-question">Add Question</button>
+          <button type="submit">Create Quiz</button>
+        </form>
+      </section>
+      <section id="quiz-list" class="section">
+        <h2>Available Quizzes</h2>
+        <ul id="quizzes" class="quiz-list"></ul>
+      </section>
+      <section id="quiz-container" class="section">
+        <div class="quiz-header">
+          <h2 id="quiz-title-display"></h2>
+          <button id="back-to-quizzes">Back to Quizzes</button>
+        </div>
+        <div id="quiz-questions"></div>
+        <button id="submit-quiz" style="display:none;">Submit Quiz</button>
+      </section>
+      <section id="quiz-result" class="section">
+        <div class="quiz-header">
+          <h2>Quiz Result</h2>
+          <button id="back-to-quizzes-result">Back to Quizzes</button>
+        </div>
+        <div id="score"></div>
+      </section>
+    </main>
+  </div>
+  <div id="notification"></div>
+  <script src="app.js"></script>
+</body>
+</html>
