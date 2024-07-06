@@ -50,6 +50,9 @@ button:hover {
 .question {
   margin-bottom: 20px;
 }
+.question-text {
+  color: #ddd;
+}
 
 #quiz-container, #quiz-result {
   display: none;

@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       notification.style.display = 'none';
     }, 3000);
   }
+  
 
   fetchQuizzes();
 });
